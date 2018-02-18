@@ -20,7 +20,7 @@ class t66yBaseSpider(scrapy.Spider):
             "//a[text()='%s']/@href" % self.unicode_next_page)[0]
         next_page_url = response.urljoin(next_page_href.extract())
 
-        #yield scrapy.Request(next_page_url, callback=self.parse)
+        yield scrapy.Request(next_page_url, callback=self.parse)
 
     def parse_thread(self, response):
         l = ItemLoader(item=T66YBaseItem(), response=response)
