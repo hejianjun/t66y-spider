@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
+import scrapy
+from scrapy.pipelines.files import FilesPipeline
 
-# Define your item pipelines here
-#
-# Don't forget to add your pipeline to the ITEM_PIPELINES setting
-# See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
-
-
-class T66YspiderPipeline(object):
-    def process_item(self, item, spider):
-        return item
+class T66YspiderPipeline(FilesPipeline):
+    def get_media_requests(self, item, info):
+        for file_url in item['file_urls']:
+            print('file_url: %s', file_url)
+            yield scrapy.Request(file_url)
+    

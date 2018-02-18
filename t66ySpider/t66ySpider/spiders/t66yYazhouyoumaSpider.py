@@ -8,8 +8,8 @@ from t66ySpider.items import T66YspiderYazhouyoumaItem
 
 class t66yYazhouyoumaSpider(scrapy.Spider):
     name = 'YaZhouYouMa'
-    allowed_domains = ['t66y.com']
-    start_urls = ["http://t66y.com/thread0806.php?fid=15"]
+    allowed_domains = ['www.t66y.com']
+    start_urls = ["https://www.t66y.com/thread0806.php?fid=15"]
     unicode_next_page = u'\u4e0b\u4e00\u9801'
     imgchili_net = re.compile(r'''imgchili''')
     imagetwist_com = re.compile(r'''imagetwist''')

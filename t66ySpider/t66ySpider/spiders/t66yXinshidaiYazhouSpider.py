@@ -7,8 +7,8 @@ from t66ySpider.items import T66YspiderXinshidaiItem
 
 class t66yDagaierSpider(scrapy.Spider):
     name = 'XinShiDaiYaZhou'
-    allowed_domains = ['t66y.com']
-    start_urls = ["http://t66y.com/thread0806.php?fid=8&type=1"]
+    allowed_domains = ['www.t66y.com']
+    start_urls = ["https://www.t66y.com/thread0806.php?fid=8"]
     unicode_next_page = u'\u4e0b\u4e00\u9801'
 
     def parse(self, response):
