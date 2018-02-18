@@ -49,9 +49,9 @@ NEWSPIDER_MODULE = 't66ySpider.spiders'
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-DOWNLOADER_MIDDLEWARES = {
-    't66ySpider.middlewares.ProxyDownloaderMiddleware': 543,
-}
+#DOWNLOADER_MIDDLEWARES = {
+#    't66ySpider.middlewares.ProxyDownloaderMiddleware': 543,
+#}
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
@@ -62,8 +62,8 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-#    'scrapy.pipelines.images.ImagesPipeline': 1,
-    't66ySpider.pipelines.T66YspiderPipeline': 300
+    'scrapy.pipelines.images.ImagesPipeline': 1,
+#    't66ySpider.pipelines.T66YspiderPipeline': 300
 }
 IMAGES_STORE = '/images3'
 IMAGES_MIN_HEIGHT = 100                               # 图片的最小高度
