@@ -29,13 +29,6 @@ class t66yYazhouwumaSpider(t66yBaseSpider):
             else:
                 t_img_l.append(link)
         l.add_value('image_urls', t_img_l)
-        t_torrent_list  = response.xpath('//a[contains(text(),"rmdown")]/text()').extract()
-        for torrent_url in t_torrent_list:
-            yield scrapy.Request(torrent_url, callback=self.parse_rmdown)
-        
         l.add_xpath('file_urls', '//a[contains(text(),"rmdown")]/text()')
         return l.load_item()
-    
-    def parse_rmdown(self, response):
-        scrapy.http.FormRequest.from_response(response,file_url)
 
