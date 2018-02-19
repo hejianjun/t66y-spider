@@ -62,10 +62,10 @@ NEWSPIDER_MODULE = 't66ySpider.spiders'
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'scrapy.pipelines.images.ImagesPipeline': 1,
+    't66ySpider.pipelines.T66YImagesPipeline': 1,
 #    't66ySpider.pipelines.T66YspiderPipeline': 300
 }
-IMAGES_STORE = '/images3'
+IMAGES_STORE = '/images'
 IMAGES_MIN_HEIGHT = 100                               # 图片的最小高度
 IMAGES_MIN_WIDTH = 100                                # 图片的最小宽度
 FILES_STORE = '/torrent'
